@@ -1,4 +1,5 @@
 import React from "react";
+import PlantCard from "./PlantCard";
 
 function NewPlantForm({addPlant}) {
   //I can add a new plant to the page by submitting the form.
