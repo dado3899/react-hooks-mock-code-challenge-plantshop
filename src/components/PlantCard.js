@@ -1,16 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
 
-function PlantCard() {
+function PlantCard({plant,patchName,deletePlant}) {
+  const [stock,setStock] = useState(true)
+  const {id,image,name,price} = plant
+
+  function handleSubmit(e){
+    e.preventDefault()
+    patchName(e.target.name.value,id)
+  }
+
   return (
     <li className="card">
-      <img src={"https://via.placeholder.com/400"} alt={"plant name"} />
-      <h4>{"plant name"}</h4>
-      <p>Price: {"plant price"}</p>
-      {true ? (
-        <button className="primary">In Stock</button>
+      <img src={image} alt={"plant name"} />
+      <h4>{name}</h4>
+      <p>Price: {price}</p>
+      {stock ? (
+        <button className="primary" onClick={()=>setStock(false)}>In Stock</button>
       ) : (
-        <button>Out of Stock</button>
+        <button onClick={()=>setStock(true)}>Out of Stock</button>
       )}
+      <form onSubmit={(e)=>handleSubmit(e)}>
+        <input name="name"placeholder="New Name"></input>
+      </form>
+      <button onClick={()=>deletePlant(id)}>Delete</button>
     </li>
   );
 }

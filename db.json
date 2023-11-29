@@ -41,6 +41,18 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "name": "Final Ramen plane",
+      "image": "https://www.aheadofthyme.com/wp-content/uploads/2019/10/healthy-miso-ramen-with-chicken-6-1-rotated.jpg",
+      "price": "2",
+      "id": 10
+    },
+    {
+      "name": "NewName",
+      "image": "NO",
+      "price": "1",
+      "id": 11
     }
   ]
 }
