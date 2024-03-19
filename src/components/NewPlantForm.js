@@ -4,9 +4,9 @@ function NewPlantForm({addPlant}) {
   function submit(e){
     e.preventDefault()
     const newPlant = {
-      name: e.target.name.value,
-      image: e.target.image.value,
-      price: e.target.price.value
+      'name': e.target.name.value,
+      'image': e.target.image.value,
+      'price': parseInt(e.target.price.value)
     }
     addPlant(newPlant)
   }
